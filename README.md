@@ -1,8 +1,8 @@
 # WoofWare.KnuthPlass
 
 [![NuGet version](https://img.shields.io/nuget/v/WoofWare.KnuthPlass.svg?style=flat-square)](https://www.nuget.org/packages/WoofWare.KnuthPlass)
-[![GitHub Actions status](https://github.com/Smaug123/WoofWare.KnuthPlass/actions/workflows/dotnet.yaml/badge.svg)](https://github.com/Smaug123/WoofWare.KnuthPlass/actions?query=branch%3Amain)
-[![License file](https://img.shields.io/github/license/Smaug123/WoofWare.KnuthPlass)](./LICENSE.md)
+[![GitHub Actions status](https://github.com/WoofWare/WoofWare.KnuthPlass/actions/workflows/dotnet.yaml/badge.svg)](https://github.com/WoofWare/WoofWare.KnuthPlass/actions?query=branch%3Amain)
+[![License file](https://img.shields.io/github/license/WoofWare/WoofWare.KnuthPlass)](./LICENSE.md)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="logos/dark.svg">
@@ -87,7 +87,7 @@ Hyphenation is not provided by this library.
 You must supply your own hyphenation callback to `Text.format`, which should return Liang-style priorities: a byte array with one element per inter-letter position, where odd values indicate valid hyphenation points.
 (All odd values mean "hyphenation allowed" equally, and all even values mean "no hyphenation allowed" equally; their numerical magnitude is an artifact of the computation that extracted hyphenation data from the Liang packed-trie data structure, and is not important for performing the hyphenation.)
 
-For English text, consider using a Knuth-Liang implementation such as [WoofWare.LiangHyphenation](https://github.com/Smaug123/WoofWare.LiangHyphenation).
+For English text, consider using a Knuth-Liang implementation such as [WoofWare.LiangHyphenation](https://github.com/WoofWare/WoofWare.LiangHyphenation).
 If you don't need hyphenation, pass a function that returns no priorities: `fun _ -> FilteredPriorities.unfiltered Array.empty`.
 
 ### Justification vs raggedness
